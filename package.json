@@ -1,0 +1,31 @@
+{
+  "name": "sweet-website",
+  "description": "Website for sweet.js",
+  "version": "1.0.0",
+  "author": "Tim Disney",
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/sweet-js/sweet-website/master/LICENSE.BSD"
+    }
+  ],
+  "browser": {
+    "babel-core": false
+  },
+  "scripts": {
+    "docs": "asciidoctorjs doc/1.0/tutorial.adoc & asciidoctorjs doc/1.0/reference.adoc"
+  },
+  "devDependencies": {
+    "asciidoctor-cli": "^1.5.2-alpha.3",
+    "asciidoctor.js": "^1.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sweet-js/sweet-website.git"
+  },
+  "keywords": [
+    "macros",
+    "javascript"
+  ],
+  "license": "BSD-2-Clause"
+}
