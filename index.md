@@ -2,18 +2,20 @@
 layout: default
 ---
 
-# Sweeten Your JavaScript
+<div style="text-align: center">
+  <img src="sweetjs.png" />
+</div>
 
-Sweet brings the hygienic macros of languages like Scheme and Rust to JavaScript. Macros allow you to sweeten the syntax of JavaScript and craft the language you've always wanted.
+<h1 class="hero">Build your dream language</h1>
 
-Macros allow *you* to build the language of your dreams. Sweeten JavaScript by defining new syntax for your code.
+Sweet brings the hygienic macros of languages like Scheme and Rust to JavaScript. Macros allow you to sweeten the syntax of JavaScript and craft the language you always wanted.
 
-# Getting started
+## Getting started
 
-Install sweet.js with npm:
+Install the command line app:
 
 ```
-$ npm install sweet.js
+$ npm install -g @sweet-js/cli
 ```
 
 Write your sweet code:
@@ -28,13 +30,12 @@ hi
 And compile:
 
 ```
-$ node_modules/.bin/sjs my_sweet_code.js
+$ sjs my_sweet_code.js
 console.log('hello, world!')
 ```
 
-# Learning More
+## Next steps
 
-* Read the [tutorial](doc/1.0/tutorial.html).
-* Read the [reference documentation](doc/1.0/reference.html).
-* Play with the [editor](browser/editor.html).
-* Hang out on IRC: #sweet.js at irc.mozilla.org.
+- **Learning**: read the [tutorial](doc/tutorial.html) or check out the [reference](doc/reference.html).
+- **Questions**: feel free to open an [issue](https://github.com/sweet-js/sweet-core/issues) on Github with any questions you might have. Folks in the [gitter](https://gitter.im/sweet-js/sweet.js) room are also very nice.
+- **Contributing**: from documentation, website upkeep, bug fixes, and features we'd love your help! See the [contributing guide](https://github.com/sweet-js/sweet-core/blob/master/CONTRIBUTING.md) for pointers on how to get involved.

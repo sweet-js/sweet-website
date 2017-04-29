@@ -19,6 +19,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
+    jekyll-toc (0.2.1)
+      nokogiri (~> 1.6)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.13.2)
@@ -27,6 +29,9 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
+    mini_portile2 (2.1.0)
+    nokogiri (1.7.1)
+      mini_portile2 (~> 2.1.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -42,6 +47,8 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-toc
+  rouge
 
 BUNDLED WITH
    1.14.6

@@ -1,55 +1,62 @@
 <!doctype html>
 <html>
 <head>
-<title>sweet.js</title>
-<link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
-<link rel="stylesheet" href="editor/theme/sweetprism.css">
-<link href='prism.css' rel='stylesheet' />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sweet.js - Hygienic Macros for JavaScript</title>
+
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
+  <link href='/css/friendly.css' rel='stylesheet' />
 <style>
-html {
-    border-top: solid 1px red;
-}
-body {
-  margin: 0;
-  padding: 0;
-  /*border-top: 2px solid #676767;*/
-}
 
-#body {
-  width: 600px;
-  margin: 0 auto;
-  position: relative;
-  top: 75px;
-}
-#nav {
+.section-nav {
   margin-top: 30px;
-  float: right;
-}
-#nav ul {
-  list-style-type: none;
 }
 
-#logo {
-  float: left;
-  width: 275px;
+.toc-h2 {
+  margin-left: 20px;
 }
 
-#content {
-  float: left;
-  width: 650px;
-  padding-bottom:50px;
+.toc-h3 {
+  margin-left: 40px;
+}
+
+.toc-h4 {
+  margin-left: 60px;
+}
+
+.footer {
+  margin-top: 50px;
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+}
+
+.hero {
+  font-size: 55px;
+}
+
+.content {
+  padding-top: 60px;
+}
+
+@media (min-width: 750px) {
+  .container {
+    width: 750px;
+  }
 }
 
 h1,h2,h3 {
-  font-family: Helvetica Neue;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 100;
-  color: #222;
   position: relative;
-  text-transform: uppercase;
   color: #444;
-  font-family: 'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  border-bottom: solid 1px #eee;
 }
 h1 {
   font-size: 300%;
@@ -62,11 +69,17 @@ h3 {
 }
 
 p, li {
-  font-family: 'Source Sans Pro', sans-serif;
-  /*font-weight: 400;*/
+  font-family: 'Open Sans', sans-serif;
   font-size: large;
 }
 
+footer p {
+  font-size: 15px;
+}
+
+pre {
+  background-color: white;
+}
 
 p code {
   font-size: 14px;
@@ -75,67 +88,56 @@ li code {
   font-size: 14px;
 }
 
-#content p#slogan {
-  margin-top: 1em;
-}
-
-#content p#placeholder {
-  margin-top: 8em;
-}
-
-a.mozilla {
-  position: relative;
-  float: left;
-  display: block;
-  height: 49px;
-  width: 118px;
-  background: url(mozilla-tab.png) 100% 0 no-repeat;
-  text-indent: -200px;
-  overflow: hidden;
-  margin-left: 20px;
-}
-
-.editor { display : none }
-
-/* to display output of macro expansions */
-.console {
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  padding: 1em;
-  margin-top:1em;
-  white-space: pre;
-  background: #f5f2f0;
-  resize: vertical;
-  max-height: 700px;
-  overflow: auto;
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
-  text-shadow:0 1px white;
-  display:none;
-}
-
 </style>
 </head>
 
 <body class="language-javascript">
 
-  <div id="body">
-    <div id="logo"><img src="sweetjs.png"></div>
-    <div id="nav">
-    <ul>
-      <li> <a href="doc/1.0/tutorial.html">tutorial documentation</a> </li>
-      <li> <a href="doc/1.0/reference.html">reference documentation</a> </li>
-      <li> <a href="browser/editor.html">online editor</a> </li>
-      <li> <a href="https://github.com/mozilla/sweet.js">github project</a></li>
-    </ul>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Sweet.js</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/doc/tutorial">Tutorial</a></li>
+          <li><a href="/doc/reference">Reference</a></li>
+          <li><a href="/browser/editor.html">Try it out!</a></li>
+          <li><a href="https://github.com/sweet-js">Github Project</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
-    <div id="content">
+  </nav>
 
-      {{content}}
 
-    </div>
+  <div class="container content">
+
+    {{content | toc}}
+
   </div>
 
-  <script src="prism.js"></script>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">
+        <a href="https://github.com/sweet-js/sweet-core">Sweet.js</a>
+        ·
+        <a href="https://github.com/sweet-js/sweet-core/blob/master/LICENSE.BSD">
+          Distributed under the BSD liscense
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <!-- <script src="/js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> -->
 </body>
 </html>
