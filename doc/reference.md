@@ -301,7 +301,7 @@ Create a new keyword syntax object with the value `kwd` using the lexical contex
 ```js
 syntax m = ctx => {
   let dummy = #`dummy`.get(0);
-  return #`${dummy.fromKeyword('let')} x = 1`;
+  return #`${fromKeyword(dummy, 'let')} x = 1`;
 };
 m
 ```
