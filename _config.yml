@@ -1,1 +1,4 @@
 exclude: ["node_modules"]
+gems:
+  - jekyll-toc
+highlighter: rouge
