@@ -14,7 +14,7 @@ Macros allow you to sweeten the syntax of JavaScript and craft the language youâ
 Install Sweet with npm:
 
 ```sh
-$ npm install -g @sweet-js/cli
+$ npm install -g @sweet-js/cli @sweet-js/helpers
 ```
 
 This globally installs the `sjs` binary, which is used to compile Sweet code.
@@ -159,7 +159,7 @@ Calling `expand` allows us to specify the grammar production we want to match; i
 One task we often need to perform in a macro is looping over syntax. Sweet helps out with that by supporting ES2015 features like `for-of`. To illustrate, here's a `cond` macro that makes the ternary operator a bit more readable:
 
 ```js
-import { unwrap, isKeyword } from 'sweet.js/helpers' for syntax;
+import { unwrap, isKeyword } from '@sweet-js/helpers' for syntax;
 
 syntax cond = function (ctx) {
   let bodyCtx = ctx.contextify(ctx.next().value);
@@ -203,7 +203,7 @@ var realTypeof = x === null ? "null" :
 
 Since delimiters nest syntax in Sweet, we need a way to get at the nested syntax. The `contextify` method on the macro context provides this functionality. Calling `contextify` with a delimiter will wrap the syntax inside the delimiter in a new macro context object that you can iterate over.
 
-Utility functions are available for import at `'sweet.js/helpers'` to inspect the syntax you are processing. Note the `for syntax` on the import declaration, which is required to make the imports available inside of a macro definition. Modules and macros are described in the modules section of this document.
+Utility functions are available for import at `'@sweet-js/helpers'` to inspect the syntax you are processing. Note the `for syntax` on the import declaration, which is required to make the imports available inside of a macro definition. Modules and macros are described in the modules section of this document.
 
 The two imports used by this macro are `isKeyword` and `unwrap`. The `isKeyword` function does what it sounds like: it tells you if a syntax object is a keyword. The `unwrap` function returns the primitive value of a syntax object. In the case of unwrapping a keyword, it returns the string representation (if the syntax was a numeric literal `unwrap` would return a number). Since some syntax objects do not have a reasonable primitive representation (e.g. delimiters), the `unwrap` function ether returns an object with a single `value` property or an empty object.
 
@@ -214,7 +214,7 @@ The full API provided by the helper module is described in the [reference docume
 So putting together what we've learned so far, let's make the sweetest of ES2015's features: `class`.
 
 ```js
-import { unwrap, isIdentifier } from 'sweet.js/helpers' for syntax;
+import { unwrap, isIdentifier } from '@sweet-js/helpers' for syntax;
 
 syntax class = function (ctx) {
   let name = ctx.next().value;
