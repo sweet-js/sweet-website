@@ -93,7 +93,7 @@ li code {
 
 <body class="language-javascript">
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -137,7 +137,12 @@ li code {
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <!-- <script src="/js/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> -->
+  {% if page.use_anchors %}
+  <script src="/js/anchor.min.js"></script>
+  <script>
+    anchors.options.placement = 'left';
+    anchors.add();
+  </script>
+  {% endif %}
 </body>
 </html>

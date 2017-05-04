@@ -1,6 +1,7 @@
 ---
 layout: default
 toc: true
+use_anchors: true
 ---
 
 # Introduction
