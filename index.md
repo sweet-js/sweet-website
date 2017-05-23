@@ -37,5 +37,5 @@ console.log('hello, world!')
 ## Next steps
 
 - **Learning**: read the [tutorial](doc/tutorial.html) or check out the [reference](doc/reference.html).
-- **Questions**: feel free to open an [issue](https://github.com/sweet-js/sweet-core/issues) on Github with any questions you might have. Folks in the [gitter](https://gitter.im/sweet-js/sweet.js) room are also very nice.
+- **Questions**: feel free to open an [issue](https://github.com/sweet-js/sweet-core/issues) on GitHub with any questions you might have. Folks in the [gitter](https://gitter.im/sweet-js/sweet.js) room are also very nice.
 - **Contributing**: from documentation, website upkeep, bug fixes, and features we'd love your help! See the [contributing guide](https://github.com/sweet-js/sweet-core/blob/master/CONTRIBUTING.md) for pointers on how to get involved.
