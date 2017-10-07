@@ -42,7 +42,7 @@ console.log('hello, world!')
 
 Note that Sweet uses [Babel](https://babeljs.io/) as a backend. After Sweet has done its work of finding and expanding macros, the resulting code is run through Babel.
 
-By default Babel preforms no transformations so you will need to configure it according to your needs. The easiest way to do this is via a [`.babelrc`](https://babeljs.io/docs/usage/babelrc/) file. A minimal configuration looks something like:
+By default Babel performs no transformations so you will need to configure it according to your needs. The easiest way to do this is via a [`.babelrc`](https://babeljs.io/docs/usage/babelrc/) file. A minimal configuration looks something like:
 
 ```js
 {
