@@ -14,7 +14,7 @@ Macros allow you to sweeten the syntax of JavaScript and craft the language youâ
 Install Sweet with npm:
 
 ```sh
-$ npm install -g @sweet-js/cli @sweet-js/helpers
+$ npm install -g @sweet-js/sweet-cli @sweet-js/sweet-helpers
 ```
 
 This globally installs the `sjs` binary, which is used to compile Sweet code.
