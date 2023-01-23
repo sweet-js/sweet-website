@@ -382,7 +382,7 @@ m
 
 ## isIdentifier
 
-``js
+```js
 isIdentifier(s: Syntax): boolean
 ```
 
